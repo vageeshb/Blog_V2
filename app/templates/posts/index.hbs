@@ -1,0 +1,13 @@
+{{#each post in model}}
+  <article class='extract'>
+    <img {{bind-attr src=post.title_image}} alt="Oops, No Image Found">
+    <h2>
+      {{link-to post.title 'post' post}}
+      <span class='info'>Published - {{format-date post.created}}</span>
+    </h2>
+    <p>{{post.summary}}</p>
+    <p>
+      {{#link-to 'post' post class='read-more' title='Click on the link to read further'}}Read More{{/link-to}}
+    </p>
+  </article>
+{{/each}}

@@ -1,0 +1,41 @@
+<article class='write-post'>
+  <a href='#' class='btn-primary' {{action hide}}>{{columns}}</a>
+  <h2>New Content</h2>
+  <div class='new-content-body'>
+    <h4>Title</h4>
+    <p>{{input value=title}}</p>
+    <h4>Summary</h4>
+    <p>{{input value=summary}}</p>
+    <h4>Body</h4>
+    <p>{{textarea value=body}}</p>
+  </div>
+</article>
+<article id='post' class='preview-post'>
+  <h2>
+    {{#if title}}
+      {{title}}
+    {{else}}  
+      Title Placeholder
+    {{/if}}
+  </h2>
+  <div class='post-info'>
+    <p>By {{creator}} [{{format-date created}}]</p>
+  </div>
+  <div class='extract'>
+    <p>
+      {{#if summary}}
+        {{summary}}
+      {{else}}
+        Summary Placeholder
+      {{/if}}
+    </p>
+  </div>
+  <div class='post-body'>
+    {{#if body}}
+      {{convert-marked body}}
+    {{else}}
+      Body Placeholder
+    {{/if}}
+    
+  </div>
+</article>

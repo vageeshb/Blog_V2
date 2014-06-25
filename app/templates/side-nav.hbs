@@ -1,0 +1,8 @@
+<h2>Recent Posts</h2>
+<nav>
+  <ul>
+    {{#each post in recentPosts}}
+      <li>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</nav>

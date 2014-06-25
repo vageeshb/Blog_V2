@@ -1,0 +1,9 @@
+<h1>{{#link-to 'application'}}{{title}}{{/link-to}}</h1>
+<p>Musings of a Creator</p>
+<nav>
+  <ul>
+    {{#each}}
+      <li>{{#link-to location}}{{name}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</nav>
