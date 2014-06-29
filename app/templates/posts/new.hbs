@@ -1,14 +1,15 @@
 <article class='write-post'>
-  <a href='#' class='btn-primary' {{action hide}}>{{columns}}</a>
-  <h2>New Content</h2>
+  <h2 class='hidden'>New Content</h2>
   <div class='new-content-body'>
     <h4>Title</h4>
     <p>{{input value=title}}</p>
     <h4>Summary</h4>
     <p>{{input value=summary}}</p>
     <h4>Body</h4>
-    <p>{{textarea value=body}}</p>
+    <p>{{textarea value=body rows=10}}</p>
   </div>
+  <a href='#' class='btn-primary' {{action hide}}>{{show}}</a>
+  <a href='#' class='btn-primary' {{action save}}>Save Post</a>
 </article>
 <article id='post' class='preview-post'>
   <h2>
@@ -18,9 +19,6 @@
       Title Placeholder
     {{/if}}
   </h2>
-  <div class='post-info'>
-    <p>By {{creator}} [{{format-date created}}]</p>
-  </div>
   <div class='extract'>
     <p>
       {{#if summary}}
@@ -36,6 +34,5 @@
     {{else}}
       Body Placeholder
     {{/if}}
-    
   </div>
 </article>

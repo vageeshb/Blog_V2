@@ -1,0 +1,9 @@
+<p>
+  [ Personal Blog &copy; <a href='https://twitter.com/VageeshB' target='_blank'>@VageeshB</a> 2014 ] |
+  {{#if isLoggedIn}}
+    {{#link-to 'posts.new'}}New Post{{/link-to}}
+    <a href='#' {{action logout}}>Logout</a>
+  {{else}}
+    {{#link-to 'login'}}Login{{/link-to}}
+  {{/if}}
+</p>

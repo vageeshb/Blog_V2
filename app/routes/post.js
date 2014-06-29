@@ -16,5 +16,12 @@ export default Ember.Route.extend({
       json.slug = id;
     }
     return json;
-  }
+  },
+  actions: {
+    error: function(reason) {
+      if (reason.status === 404) {
+        this.transitionTo('posts');
+      }
+    },
+  },
 });

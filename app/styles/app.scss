@@ -126,6 +126,9 @@ input:focus, textarea:focus {
     img {
       display: none;
     }
+    p {
+      padding-left: 0;
+    }
   }
   #slides, #about {
     width: 350px;
@@ -164,7 +167,12 @@ input:focus, textarea:focus {
       }
     }
   }
-
+  
+  article.extract {
+    p {
+      padding-left: 215px;
+    }
+  }
   #slides, #about {
     width: 750px;
   }
@@ -289,7 +297,7 @@ header {
         font-size: 28px;
         line-height: 1.2;
         word-spacing: 5px;
-        padding-left: 215px;
+        
         .read-more {
           background-color: $background-secondary-color;
           border-radius: 5px;
@@ -505,10 +513,58 @@ footer {
   }
 }
 
+/* New Post Style */
 .write-post, .preview-post {
   width: 45%;
   margin: 0px;
   display: inline-block;
+  padding: 0px;
   min-height: 100%;
   vertical-align: top;
+}
+
+.write-post {
+  .new-content-body {
+    textarea {
+      resize: vertical;
+    }
+  }
+  a {
+    display: inline-block;
+  }
+  a:last-child {
+    float: right;
+  }
+}
+
+/* Login Form */
+.login-form {
+  max-width: 800px;
+  margin: 30px auto;
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+  }
+  button {
+    margin: 0 43.75%;
+    width: 100px;
+  }
+  .alert{
+    font-size: 24px;
+    font-weight: bold;
+    color: $secondary-color;
+    margin-bottom: 10px;
+    border: 1px solid $primary-color;
+    padding: 10px;
+    text-align: center;
+    background: $primary-color;
+    border-radius: 4px;
+  }
 }
