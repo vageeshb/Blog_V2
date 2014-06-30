@@ -31,34 +31,30 @@ var app = new EmberApp({
 
 app.import('vendor/highlightjs/styles/monokai.css');
 app.import('vendor/highlightjs/highlight.js');
-app.import('vendor/slidesjs/slides.js');
 app.import('vendor/marked/lib/marked.js');
 app.import('vendor/momentjs/moment.js');
-
-// Font Awesome
-/*app.import('vendor/fontawesome/css/font-awesome.css');
-app.import('vendor/fontawesome/fonts/fontawesome-webfont.woff');
-app.import('vendor/fontawesome/fonts/fontawesome-webfont.eot');
-app.import('vendor/fontawesome/fonts/fontawesome-webfont.svg');
-app.import('vendor/fontawesome/fonts/fontawesome-webfont.ttf');*/
 
 app.import({
   development: 'vendor/ember-data/ember-data.js',
   production:  'vendor/ember-data/ember-data.prod.js'
 }, {
-  'ember-data': [
-    'default'
-  ]
+  exports: {
+    'ember-data': [
+      'default'
+    ]
+  }
 });
 
 app.import('vendor/ic-ajax/dist/named-amd/main.js', {
-  'ic-ajax': [
-    'default',
-    'defineFixture',
-    'lookupFixture',
-    'raw',
-    'request',
-  ]
+  exports: {
+    'ic-ajax': [
+      'default',
+      'defineFixture',
+      'lookupFixture',
+      'raw',
+      'request',
+    ]
+  }
 });
 
 

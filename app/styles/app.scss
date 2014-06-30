@@ -325,6 +325,12 @@ header {
       .post-info {
         font-size: 18px;
         margin: 10px 0 10px 0;
+        p {
+          display: inline-block;
+        }
+        a {
+          display: inline-block;
+        }
       }
       .post-body {
         border-top: 1px solid $primary-color;

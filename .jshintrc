@@ -6,7 +6,8 @@
     "marked": true,
     "moment": true,
     "hljs": true,
-    "$": true
+    "$": true,
+    "ga":true
   },
   "browser" : true,
   "boss" : true,
