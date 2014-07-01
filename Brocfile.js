@@ -30,7 +30,7 @@ var app = new EmberApp({
 // along with the exports of each module as its value.
 
 app.import('vendor/highlightjs/styles/monokai.css');
-app.import('vendor/highlightjs/highlight.js');
+app.import('vendor/highlightjs/highlight.pack.js');
 app.import('vendor/marked/lib/marked.js');
 app.import('vendor/momentjs/moment.js');
 
